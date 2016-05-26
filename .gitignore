@@ -1,7 +1,9 @@
 *.pyc
 *.json
 *~
-DEADJOE
 media/temp
-env/*
-.idea/*
+.idea/
+bookstore/__pycache__/
+bookstoreapp/__pycache__/
+bookstoreapp/migrations/__pycache__/
+env/
