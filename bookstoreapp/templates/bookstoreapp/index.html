@@ -1,0 +1,21 @@
+{% extends 'bookstoreapp/layout/layout.html' %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1> Wellcome to category list </h1>
+
+
+    {% if category_list %}
+    <div class="well well-sm">
+    <ul>
+        {% for category in category_list %}
+             <li><a href="{% url 'bookstoreapp:categoryView' category_id=category.id %}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No categories available.</p>
+    </div>
+    {% endif %}
+
+{% endblock %}
+
