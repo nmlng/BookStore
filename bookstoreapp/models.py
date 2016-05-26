@@ -8,11 +8,13 @@ class Editor(models.Model):
     def __str__(self):
         return self.name
 
+
 class Category(models.Model):
     name = models.CharField(max_length=256, default=" ")
 
     def __str__(self):
         return self.name
+
 
 class Author(models.Model):
     name = models.CharField(max_length=256, default=" ")
@@ -20,11 +22,13 @@ class Author(models.Model):
     def __str__(self):
         return self.name
 
+
 class Book(models.Model):
-    name = models.CharField(max_length=256, default=" x ")
-    editor =  models.ForeignKey(Editor)
+    name = models.CharField(max_length=256, default=" xxx ")
+    editor = models.ForeignKey(Editor)
     category = models.ForeignKey(Category)
     author = models.ForeignKey(Author)
+
 
 class BookForm(ModelForm):
     class Meta:

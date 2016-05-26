@@ -9,7 +9,7 @@
     <div class="well well-sm">
     <ul>
         {% for category in category_list %}
-             <li><a href="{% url 'bookstoreapp:categoryView' category_id=category.id %}">{{ category.name }}</a></li>
+             <li><a href="{% url 'bookstoreapp:category_view' category_id=category.id %}">{{ category.name }}</a></li>
         {% endfor %}
     </ul>
     {% else %}
