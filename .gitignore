@@ -7,3 +7,8 @@ bookstore/__pycache__/
 bookstoreapp/__pycache__/
 bookstoreapp/migrations/__pycache__/
 env/
+Procfile
+requirements.txt
+runtime.txt
+db.sqlite3
+
