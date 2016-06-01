@@ -52,6 +52,7 @@ class IndexView(generic.ListView):
         return Category.objects.all()
 
 
+
 # class BooksInCategoryView(generic.ListView):
 #    template_name = 'admin/booklist.html'
 #    context_object_name = 'book_list'

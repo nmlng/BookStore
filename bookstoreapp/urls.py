@@ -4,7 +4,7 @@ from . import views
 
 app_name = 'bookstoreapp'
 urlpatterns = [
-    url(r'^$', views.IndexView.as_view(), name='index'),
+    url(r'^$', views.IndexView.as_view(), name='indexamos'),
     url(r'^createbook$', views.bookcreate, name='bookcreate'),
     url(r'^createeditor$', views.editorcreate, name='editorcreate'),
     url(r'^createauthor$', views.authorcreate, name='authorcreate'),
