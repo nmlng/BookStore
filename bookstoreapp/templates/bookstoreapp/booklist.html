@@ -3,24 +3,6 @@
 {% block title %}Book List{% endblock %}
 {% block content %}
 
-{% comment %}
-    <h1>{{ category }}</h1>
-
-    {% if book_list and  category %}
-        <h3>Books List: </h3>
-    <ul>
-        {% for book in book_list %}
-
-            <li>{{ book.name }} -- {{ book.author }}- {{ book.editor }} </li>
-        {% endfor %}
-    </ul>
-    {% elif category %}
-        <p>No books available for this category.</p>
-    {% else %}
-        <h3>Wrong category selection</h3>
-    {% endif %}
-{% endcomment %}
-
   <div class="well well-sm">
   <h2>{{ category }}</h2>
   {% if book_list and  category %}

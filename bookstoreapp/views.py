@@ -11,7 +11,7 @@ def bookcreate(request):
     elif request.method == "POST":
         form = BookForm(request.POST)
         form.save()
-        return HttpResponseRedirect('')
+        return render(request, 'bookstoreapp/saved.html', {'object_type': 'Book', 'name': form.data['name']})
 
 
 def editorcreate(request):
@@ -21,7 +21,7 @@ def editorcreate(request):
     elif request.method == "POST":
         form = EditorForm(request.POST)
         form.save()
-        return HttpResponseRedirect('')
+        return render(request, 'bookstoreapp/saved.html', {'object_type': 'Editor', 'name': form.data['name']})
 
 
 def authorcreate(request):
@@ -31,7 +31,7 @@ def authorcreate(request):
     elif request.method == "POST":
         form = AuthorForm(request.POST)
         form.save()
-        return HttpResponseRedirect('')
+        return render(request, 'bookstoreapp/saved.html', {'object_type': 'Author', 'name': form.data['name']})
 
 
 def categorycreate(request):
@@ -41,7 +41,7 @@ def categorycreate(request):
     elif request.method == "POST":
         form = CategoryForm(request.POST)
         form.save()
-        return HttpResponseRedirect('')
+        return render(request, 'bookstoreapp/saved.html', {'object_type': 'Category', 'name': form.data['name']})
 
 
 class IndexView(generic.ListView):
@@ -50,15 +50,6 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         return Category.objects.all()
-
-
-
-# class BooksInCategoryView(generic.ListView):
-#    template_name = 'admin/booklist.html'
-#    context_object_name = 'book_list'
-
-#    def get_queryset(self):
-#        return Book.objects.filter()
 
 
 def category_view(request, category_id):

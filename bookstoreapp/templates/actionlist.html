@@ -1,0 +1,8 @@
+{% extends 'bookstoreapp/layout/layout.html' %}
+{% block title %}Action list{% endblock %}
+{% block content %}
+<h2>{{ object_type }} with name: <br> '{{ name }}' <br>saved! </h2>
+    <form action=".">
+        <button type="submit" class="btn btn-success">Go back</button>
+    </form>
+{% endblock %}
